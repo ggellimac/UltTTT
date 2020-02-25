@@ -17,7 +17,9 @@
 }
 
 body {
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/background_extended.jpg");
+  background-repeat: repeat-x;
+  background-color: #201a56;
   font-family: arcade_interlacedregular, sans-serif;
 }
 
