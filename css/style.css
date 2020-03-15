@@ -31,11 +31,17 @@
   padding: 15px;
 }
 
+#countdown {
+  text-align: center;
+  font-family: arcade_normalregular, sans-serif;
+}
+
 body {
   background-image: url("../images/background_extended.jpg");
   background-repeat: repeat-x;
   background-color: #201a56;
   font-family: arcade_interlacedregular, sans-serif;
+  font-weight: normal;
 }
 
 h1 {
@@ -45,6 +51,7 @@ h1 {
   color: white;
   text-align: center;
 }
+
 .button-section {
   background-color: rgba(0, 0, 0, 0.5);
   float: left;
@@ -69,7 +76,7 @@ button.btn {
   background-color: rgba(255, 0, 0, 0.0);
   display: flex;
   justify-content: center;
-  font-family: arcade_interlacedregular, sans-serif;
+/*  font-family: arcade_interlacedregular, sans-serif; */
   line-height: 1.6;
 }
 
