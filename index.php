@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+?>
 <html>
 <head>
 <title>Ultimate Tic-Tac-Toe</title>
@@ -7,11 +9,15 @@
 </head>
 <body>
   <h1>Ultimate Tic-Tac-Toe</h1>
-  <p id="countdown"><p>
+  <div class="header">
+    <p>Welcome, <?php echo $_SESSION['username'];?>.</p>
+    <p id="countdown"><p>
+  </div>
   <div class="col-3 button-section">
     <button class="btn">New Game</button><br>
     <a href="rules.html" target="_self" class="btn">How To Play</a>
     <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
+    <a href = "logout.php" class="btn">Sign Out</a>
   </div>
   <div class="col-1"></div>
   <div class="col-4 container">

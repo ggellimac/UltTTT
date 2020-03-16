@@ -34,6 +34,7 @@
 #countdown {
   text-align: center;
   font-family: arcade_normalregular, sans-serif;
+  color: white;
 }
 
 body {
@@ -49,6 +50,17 @@ h1 {
   font-size: 35px;
   line-height: 50px;
   color: white;
+  text-align: center;
+}
+
+.header {
+  font-family: arcade_normalregular, sans-serif;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+#center {
   text-align: center;
 }
 
@@ -133,6 +145,10 @@ table.mini td:hover{
     margin-right: auto;
     width: 600px;
     line-height: 110%;
+}
+
+.line-height {
+  line-height: 1.6;
 }
 
 /* For mobile phones: */
