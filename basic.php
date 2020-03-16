@@ -1,5 +1,8 @@
 <?php
   session_start();
+  $cookie_name = "admin";
+  $cookie_value = "0";
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 ?>
 <html>
 <head>
@@ -11,13 +14,22 @@
   <h1>Ultimate Tic-Tac-Toe</h1>
   <div class="header">
     <p>Welcome, <?php echo $_SESSION['username'];?>.</p>
-    <p id="countdown"><p>
+    <p id="countdown"></p>
+    <p>
+      <?php
+      if(!isset($_COOKIE[$cookie_name])) {
+           echo "Cookie named '" . $cookie_name . "' is not set!";
+      } else {
+           echo "Cookie '" . $cookie_name . "' is set!<br>";
+           echo "Highscore is: " . $_COOKIE[$cookie_name];
+      }
+      ?>
+    </p>
   </div>
   <div class="col-3 button-section">
     <button class="btn">New Game</button><br>
     <a href = "ultttt.php" class="btn">Change Game Mode</a>
     <a href="basicrules.html" target="_self" class="btn">How To Play</a>
-    <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
   <div class="col-1"></div>
@@ -39,10 +51,6 @@
         <td class="cell" data-cell></td>
       </tr>
     </table>
-  </div>
-  <div class="winning-message" id="winningMessage">
-    <div data-winning-message-text></div>
-    <button id="restartButton">Restart</button>
   </div>
 </body>
 <script src="js/clock.js"></script>

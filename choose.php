@@ -14,7 +14,6 @@
     <p id="countdown"><p>
   </div>
   <div class="col-3 button-section">
-    <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
   <div class="col-1"></div>

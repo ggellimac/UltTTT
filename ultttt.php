@@ -17,7 +17,6 @@
     <button class="btn">New Game</button><br>
     <a href = "choose.php" class="btn">Choose Game Mode</a>
     <a href="rules.html" target="_self" class="btn">How To Play</a>
-    <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
   <div class="col-1"></div>

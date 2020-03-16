@@ -4,7 +4,7 @@
         // Check form submit with IF Isset function
         $username="admin"; // set variable value
         $password="123"; // set variable value
-        if($_POST['username']==$username && $_POST['password']==$password){ 
+        if($_POST['username']==$username && $_POST['password']==$password){
             // Check Given user name, password and Variable user name password are same
             $_SESSION['username']=$username; // set session from given user name
             header('location:choose.php');
@@ -26,6 +26,7 @@
         <div class="button-section">
             <a href="rules.html" target="_self" class="btn">How To Play</a>
             <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
+            <a href="https://youtu.be/Azpvnw79GXA" target="_self" class="btn">YouTube Video2</a>
         </div>
 
         <div class="container">
