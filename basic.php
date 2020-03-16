@@ -24,21 +24,25 @@
   <div class="col-4 container">
     <table class="col-4 mini center">
       <tr>
-        <td data-cell></td>
-        <td data-cell></td>
-        <td data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
       </tr>
       <tr>
-        <td data-cell></td>
-        <td data-cell></td>
-        <td data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
       </tr>
       <tr>
-        <td data-cell></td>
-        <td data-cell></td>
-        <td data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
+        <td class="cell" data-cell></td>
       </tr>
     </table>
+  </div>
+  <div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Restart</button>
   </div>
 </body>
 <script src="js/clock.js"></script>

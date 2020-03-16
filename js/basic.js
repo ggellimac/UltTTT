@@ -1,6 +1,8 @@
-const tableCells = document.querySelectorAll('[data-cell]')
-const xPlayer = 'x'
-const oPlayer = 'o'
+const tableCells = document.querySelectorAll('[data-cell]');
+const xPlayer = 'x';
+const oPlayer = 'o';
+var numOfMoves = 0;
+var currentTurn = 1;
 let oTurn
 tableCells.forEach(td => {
   td.addEventListener('click', handleClick, {once:true})
@@ -8,10 +10,24 @@ tableCells.forEach(td => {
 
 function handleClick(e){
   const cell = e.target //target clicked cell
-  const turn = oTurn ? oPlayer : xPlayer //if it's o's turn, return o, if not return x
-  placeLetter(cell, turn)
+  numOfMoves++; //move was made
+  if (currentTurn % 2 === 1) {
+        event.target.innerHTML = xPlayer;
+        currentTurn++;
+    } else {
+        event.target.innerHTML = oPlayer;
+        currentTurn--;
+    }
+
+    if (checkForWinner()) {
+        theWinner = currentTurn == 1 ? player2 : player1;
+        displayWinner(theWinner);
+    }
 }
 
-function placeLetter(cell, turn){
-  cell.classList.add(turn)
+function displayWinner(winner) {
+    winnerContainer.css('display', "block");
+    reset.css('display', 'block');
+    winner = winner === player1 ? 'Player1' : 'Player2';
+    winnerContainer.html(winner + " Wins!");
 }

@@ -16,7 +16,7 @@
 
 }
 /*grid view for responsive layout*/
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
