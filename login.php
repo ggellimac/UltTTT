@@ -1,19 +1,18 @@
 <?php
-session_start();
-if(isset($_POST['login_user'])) // Check form submit with IF Isset function
-{
-$username="admin"; // set variable value
-$password="123"; // set variable value
-if($_POST['username']==$username && $_POST['password']==$password) // Check Given user name, password and Variable user name password are same
-{
-$_SESSION['username']=$username; // set session from given user name
-header('location:choose.php');
-}
-else
-{
-$err="Authentication Failed Try again!";
-}
-}
+    session_start();
+    if(isset($_POST['login_user'])){
+        // Check form submit with IF Isset function
+        $username="admin"; // set variable value
+        $password="123"; // set variable value
+        if($_POST['username']==$username && $_POST['password']==$password){ 
+            // Check Given user name, password and Variable user name password are same
+            $_SESSION['username']=$username; // set session from given user name
+            header('location:choose.php');
+        }
+        else{
+            $err="Authentication Failed Try again!";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +22,7 @@ $err="Authentication Failed Try again!";
     </head>
     <body>
         <h1>Ultimate Tic-Tac-Toe</h1>
-        <p id="center"><?php if(isset($err)){ echo $err; } ?> </p> <!--print error-->
+        <p id="center" style="color:red;"><?php if(isset($err)){ echo $err; } ?> </p> <!--print error-->
         <div class="button-section">
             <a href="rules.html" target="_self" class="btn">How To Play</a>
             <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
