@@ -15,6 +15,7 @@
   </div>
   <div class="col-3 button-section">
     <button class="btn">New Game</button><br>
+    <a href = "basic.php" class="btn">Change Game Mode</a>
     <a href="rules.html" target="_self" class="btn">How To Play</a>
     <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
     <a href = "logout.php" class="btn">Sign Out</a>

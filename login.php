@@ -7,7 +7,7 @@ $password="123"; // set variable value
 if($_POST['username']==$username && $_POST['password']==$password) // Check Given user name, password and Variable user name password are same
 {
 $_SESSION['username']=$username; // set session from given user name
-header('location:index.php');
+header('location:choose.php');
 }
 else
 {
@@ -37,7 +37,7 @@ $err="Authentication Failed Try again!";
                 <label>Password</label>
                 <input type="password" name="password"><br><br>
                 <button type="submit" class="btn" name="login_user">Login</button>
-                <button type="button" class="btn" onclick="window.location.href='index.php'">Enter as guest</button>
+                <button type="button" class="btn" onclick="window.location.href='choose.php'">Enter as guest</button>
             </form><br><br>
             <p class="line-height">Not yet a member?<br> <a href="register.php">Sign up</a>
             </p>
