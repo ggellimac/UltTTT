@@ -166,6 +166,7 @@ table.mini td:hover{
 .board-container {
     height: 100%;
     width: 100%
+
 }
 
 .board {
@@ -178,6 +179,7 @@ table.mini td:hover{
     /* add below this second */
     border: 3px solid black;
     font-size: 56px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 

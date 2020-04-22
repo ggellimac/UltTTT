@@ -28,14 +28,12 @@ include('session.php');
       ?>
     </p>
   </div>
-  <!-- <div class="col-3 button-section">
-    <a class="btn" href="basic.php">New Game</button><br>
+  <div class="col-3 button-section">
     <a href = "ultttt.php" class="btn">Change Game Mode</a>
     <a href="basicrules.html" target="_self" class="btn">How To Play</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
-  <div class="col-1"></div> -->
-  <!--<div class="col-4 container">-->
+  <div class="col-1"></div>
     <div class="board-container flex-container flex-column flex-center">
       <div class='flex-container flex-center'>
           <div class='winner'></div>
@@ -53,7 +51,7 @@ include('session.php');
           <div class="square flex-container flex-center"></div>
       </div>
     </div>
-  <!-- </div> -->
+
 </body>
 <script src="js/clock.js"></script>
 <script src="js/basic.js"></script>
