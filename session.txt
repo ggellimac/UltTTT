@@ -1,0 +1,14 @@
+    session_start();
+    if(isset($_POST['login_user'])){
+        // Check form submit with IF Isset function
+        $username="admin"; // set variable value
+        $password="123"; // set variable value
+        if($_POST['username']==$username && $_POST['password']==$password){
+            // Check Given user name, password and Variable user name password are same
+            $_SESSION['username']=$username; // set session from given user name
+            header('location:choose.php');
+        }
+        else{
+            $err="Authentication Failed Try again!";
+        }
+    }

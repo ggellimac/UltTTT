@@ -1,4 +1,3 @@
-<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,23 +11,23 @@
   </div>
 
   <div class="container">
-  <form method="post" action="register.php">
+  <form method="post" action="update.php">
       <?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>First Name</label>
-  	  <input type="firstname" name="firstname" value="<?php echo $firstname; ?>">
+  	  <input type="firstname" name="firstname">
   	</div>
     <br><br>
 
     <div class="input-group">
   	  <label>Last Name</label>
-  	  <input type="lastname" name="lastname" value="<?php echo $lastname; ?>">
+  	  <input type="lastname" name="lastname">
   	</div>
     <br><br>
 
   	<div class="input-group">
   	  <label>Username</label>
-  	  <input type="username" name="username" value="<?php echo $username; ?>">
+  	  <input type="username" name="username">
   	</div>
     <br><br>
 

@@ -1,5 +1,5 @@
 <?php
-  session_start();
+include('session.php');
 ?>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <body>
   <h1>Ultimate Tic-Tac-Toe</h1>
   <div class="header">
-    <p>Welcome, <?php echo $_SESSION['username'];?>.</p>
+    <p>Welcome, <?=$login_session?>.</p>
     <p id="countdown"><p>
   </div>
   <div class="col-3 button-section">

@@ -1,42 +1,55 @@
-const tableCells = document.querySelectorAll('[data-cell]');
-const xPlayer = 'x';
-const oPlayer = 'o';
-var numOfMoves = 0;
-var currentTurn = 1;
-let oTurn
-tableCells.forEach(td => {
-  td.addEventListener('click', handleClick, {once:true})
-})
+var player1 = 'X';
+var player2 = 'O';
 
-function handleClick(e){
-  const cell = e.target //target clicked cell
-  numOfMoves++; //move was made
-  if (currentTurn % 2 === 1) {
-        event.target.innerHTML = xPlayer;
+var currentTurn = 1;
+var movesMade = 0;
+
+var winnerContainer = $('.winner');
+var reset = $('.reset');
+
+var sqr = $('.square');
+
+
+sqr.on('click', (e) => {
+    movesMade++;
+    //track moves
+    if (currentTurn % 2 === 1) {
+        event.target.innerHTML = player1;
+        event.target.style.color = "red";
         currentTurn++;
     } else {
-        event.target.innerHTML = oPlayer;
+        event.target.innerHTML = player2;
+        event.target.style.color = "green";
         currentTurn--;
     }
 
-    if (checkWinner()) {
+    if (checkForWinner()) {
         theWinner = currentTurn == 1 ? player2 : player1;
-        displayWinner(theWinner);
+        declareWinner(theWinner);
     }
-}
+});
 
-function displayWinner(winner) {
+reset.on('click', (e) => {
+    var moves = Array.prototype.slice.call($(".square"));
+    moves.map((m) => {
+        m.innerHTML = "";
+    });
+    winnerContainer.html('');
+    winnerContainer.css('display', "none");
+    currentTurn = 1;
+});
+
+function declareWinner(winner) {
     winnerContainer.css('display', "block");
     reset.css('display', 'block');
-    winner = winner === player1 ? 'Player1' : 'Player2';
+    winner = winner === player1 ? 'X' : 'O';
     winnerContainer.html(winner + " Wins!");
 }
 
-function checkWinner() {
-    //at least four moves needed for a win
-    if (numOfMoves > 4) {
+function checkForWinner() {
+    //at least four moves for win
+    if (movesMade > 4) {
         var sqr = $('.square');
-        //research why we need call here!
         var moves = Array.prototype.slice.call($(".square"));
         var results = moves.map(function(square) { return square.innerHTML; });
         var winningCombos = [
