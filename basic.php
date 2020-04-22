@@ -28,7 +28,7 @@
   </div>
   <div class="col-3 button-section">
     <button class="btn">New Game</button><br>
-    <a href = ".php" class="btn">Choose Game Mode</a>
+    <a href = "choose.php" class="btn">Choose Game Mode</a>
     <a href="basicrules.html" target="_self" class="btn">How To Play</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
