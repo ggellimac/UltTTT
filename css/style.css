@@ -173,6 +173,10 @@ table.mini td:hover{
     width: 618px;
 }
 
+.miniboard{
+    width: 206px;
+}
+
 .square {
     width: 200px;
     height: 200px;
@@ -182,8 +186,21 @@ table.mini td:hover{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.minisquare {
+    width: 66.5px;
+    height: 66.5px;
+    /* add below this second */
+    border: 1px solid black;
+    font-size: 18.6px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 /* make x's and o's two different colors through javascript */
+.minisquare:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
 
 .square:hover {
     background: floralwhite;

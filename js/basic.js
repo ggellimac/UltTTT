@@ -15,11 +15,11 @@ sqr.on('click', (e) => {
     //track moves
     if (currentTurn % 2 === 1) {
         event.target.innerHTML = player1;
-        event.target.style.color = "red";
+        event.target.style.color = "midnightblue";
         currentTurn++;
     } else {
         event.target.innerHTML = player2;
-        event.target.style.color = "green";
+        event.target.style.color = "royalblue";
         currentTurn--;
     }
 
