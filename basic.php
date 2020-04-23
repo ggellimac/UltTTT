@@ -23,12 +23,12 @@ include('session.php');
            echo "Cookie named '" . $cookie_name . "' is not set!";
       } else {
            echo "Cookie '" . $cookie_name . "' is set!<br>";
-           echo "Highscore is: " . $_COOKIE[$cookie_name];
+      //     echo "Highscore is: " . $_COOKIE[$cookie_name];
       }
       ?>
     </p>
   </div>
-  <div class="col-3 button-section">
+  <div class="col-3 basic-button-section">
     <a href = "ultttt.php" class="btn">Change Game Mode</a>
     <a href="basicrules.html" target="_self" class="btn">How To Play</a>
     <a href = "logout.php" class="btn">Sign Out</a>
@@ -37,7 +37,7 @@ include('session.php');
     <div class="board-container flex-container flex-column flex-center">
       <div class='flex-container flex-center'>
           <div class='winner'></div>
-          <button class='reset'>Reset</button>
+          <button class='btn reset'>Reset</button>
       </div>
       <div class="board flex-container flex-wrap ">
           <div class="square flex-container flex-center"></div>

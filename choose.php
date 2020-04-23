@@ -14,6 +14,7 @@ include('session.php');
     <p id="countdown"><p>
   </div>
   <div class="col-3 button-section">
+    <a href = "options.php" class="btn">Options</a>
     <a href = "logout.php" class="btn">Sign Out</a>
   </div>
   <div class="col-1"></div>
