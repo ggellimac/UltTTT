@@ -37,7 +37,7 @@ include('session.php');
     <div class="board-container flex-container flex-column flex-center">
       <div class='flex-container flex-center'>
           <div class='winner'></div>
-          <button class='btn reset'>Reset</button>
+          <button class='basic-button-section reset'>Reset</button>
       </div>
       <div class="board flex-container flex-wrap ">
           <div class="square flex-container flex-center"></div>
