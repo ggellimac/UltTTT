@@ -18,13 +18,13 @@ include('session.php');
             <p>Welcome, <?php echo $_SESSION['login_name'];?>.</p>
             <p id="countdown"><p>
         </div>
-        <div class="col-3 button-section">
+        <div class="col-3 basic-button-section">
             <a href = "choose.php" class="btn">Choose Game Mode</a>
             <a href="rules.html" target="_self" class="btn">How To Play</a>
             <a href = "logout.php" class="btn">Sign Out</a>
         </div>
         <div class="col-1"></div>
-  
+
         <div class="board-container flex-container flex-column flex-center">
             <div class='flex-container flex-center'>
                 <div class='winner'></div>
@@ -168,7 +168,7 @@ include('session.php');
                     </div>
                 </div>
             </div>
-        
+
     </body>
     <script src="js/clock.js"></script>
     <script src="js/ultttt.js"></script>

@@ -51,7 +51,6 @@ include('session.php');
                 <div class="square flex-container flex-center"></div>
           </div>
         </div>
-=======
 <head>
 <title>Ultimate Tic-Tac-Toe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,7 +96,6 @@ include('session.php');
           <div class="square flex-container flex-center"></div>
       </div>
     </div>
->>>>>>> 3fe3f101bd008a2e1aec6c32ea8192b9fbf1d7ae
 
     </body>
     <script src="js/clock.js"></script>
