@@ -37,13 +37,13 @@ sqr.on('click', (e) => {
         event.target.style.color = "royalblue";
         currentTurn--;
     }
-    
-    
+
+
     currentId = e.currentTarget.id;
     enableMiniboard(currentId);
-    checkCurrentSqr(currentId);
-    
-    
+    checkCurrentSqr(currentId); //checks which of the 9 game boards the player is on and assigns to var "currentSqr"
+
+    //passes the id of the local/small board and checks if there is a winner
     localCheckForWinner(currentSqr);
 
     if (globalCheckForWinner()) {
@@ -52,6 +52,7 @@ sqr.on('click', (e) => {
     }
 });
 
+//TODO: Fix reset
 reset.on('click', (e) => {
     var moves = Array.prototype.slice.call($(".minisquare"));
     moves.map((m) => {
@@ -69,6 +70,7 @@ function declareWinner(winner) {
     winnerContainer.html(winner + " Wins!");
 }
 
+//returns which of the 9 small boards the player is on and assigns it to "currentSqr"
 function checkCurrentSqr(id){
     if(id == "l11" || id == "l12" || id == "l13" || id == "l14" || id == "l15" || id == "l16" || id == "l17" || id == "l18" || id == "l19"){
         currentSqr = "g1";
@@ -99,6 +101,7 @@ function checkCurrentSqr(id){
     }
 }
 
+//TODO: disable other boards
 //Highlights playable mini-boards
 function enableMiniboard(id){
     var select = [];
@@ -118,7 +121,7 @@ function enableMiniboard(id){
             for(var i=0; i<select.length; i++){
                 document.getElementById(select[i]).style.backgroundColor = "rgba(255, 255, 255, 0.5)";
             }
-            
+
         }
         else{document.getElementById("g1").style.backgroundColor = "floralwhite";}
     }
@@ -212,6 +215,7 @@ function enableMiniboard(id){
     }
 }
 
+//TODO: fix
 //Checks if there is a winning combination in Global Board
 function globalCheckForWinner() {
     //at least four moves for win
@@ -252,8 +256,8 @@ function condenseCombo(){
 }
 
 function localCheckForWinner(sqr) {
-    var moves = Array.prototype.slice.call($(".minisquare"));
-    var results = moves.map(function(square) { return square.innerHTML; });
+    var moves = Array.prototype.slice.call($(".minisquare")); //takes the contents of the small board and puts it into an array
+    var results = moves.map(function(square) { return square.innerHTML; }); //store contents in var
     if(sqr == "g1"){
         winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
         return winningCombos.find(function(combo1) {

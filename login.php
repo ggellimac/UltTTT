@@ -11,7 +11,7 @@
             <a href="rules.html" target="_self" class="btn">How To Play</a>
             <a href="https://youtu.be/F3ZAWyA-NAc" target="_self" class="btn">YouTube Video</a>
             <a href="https://youtu.be/Azpvnw79GXA" target="_self" class="btn">YouTube Video2</a>
-            <a href="" target="_self" class="btn">YouTube Video3</a>
+            <a href="https://youtu.be/g8tl22-EPpA" target="_self" class="btn">YouTube Video3</a>
         </div>
 
         <div class="container">

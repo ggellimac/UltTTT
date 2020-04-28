@@ -6,7 +6,6 @@ include('session.php');
   setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 ?>
 <html>
-<<<<<<< HEAD
     <head>
         <title>Ultimate Tic-Tac-Toe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
